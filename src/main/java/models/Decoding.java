@@ -18,8 +18,8 @@ public class Decoding {
     
   }
 
-  Object getEncodedText() {
-    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  public String getEncodedText() {
+   return null;
   }
   
 }
