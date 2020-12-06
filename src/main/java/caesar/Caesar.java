@@ -36,12 +36,12 @@ public class Caesar {
       String plainText){
       try {
           FileWriter encryptor = new FileWriter("encodedText.txt");
-          encryptor.write("Cipher Key: "+cipherKey);
-          encryptor.write("Input String: "+plainText);
-          encryptor.write("Encrypted String: "+encodedText);
+          encryptor.write("Cipher Key: "+cipherKey+"\n");
+          encryptor.write("Input String: "+plainText+"\n");
+          encryptor.write("Encrypted String: "+encodedText+"\n");
           encryptor.close();
           System.out.println("Successfully wrote to the file.");
-          File myObj = new File("encodedText.txt");
+          File myObj       = new File("encodedText.txt");
           Scanner myReader = new Scanner(myObj);
           while (myReader.hasNextLine()) {
             FileWriter decoder = new FileWriter("decodedText.txt");

@@ -51,7 +51,7 @@ public class Encoding {
     List<String> reconstructed = new ArrayList<>();
     for(String word: words){
       List<String> morphedWord = new ArrayList<>();
-      char [] letters = word.toCharArray();
+      char [] letters = word.toUpperCase().toCharArray();
       for(char letter: letters){
         if(listItems.contains(letter)){
           int newIndex  = (listItems.indexOf(letter)+this.cipherKey)%alphabets.length;
