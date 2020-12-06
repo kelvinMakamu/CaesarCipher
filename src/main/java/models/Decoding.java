@@ -11,4 +11,15 @@ package models;
  */
 public class Decoding {
   
+  private String encodedText;
+  private int cipherKey;
+  
+  Decoding(String c, int i) {
+    
+  }
+
+  Object getEncodedText() {
+    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  }
+  
 }

@@ -5,6 +5,7 @@
  */
 package models;
 
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 /**
@@ -13,6 +14,16 @@ import org.junit.Test;
  */
 public class DecodingTest {
   
+  @Test
+  public void Decoding_Instantiation(){
+    Decoding decode = new Decoding("C",2);
+    assertEquals(true,decode instanceof Decoding);
+  }
   
-  
+  @Test
+  public void Decoding_getsEncodedText(){
+    Decoding decode = new Decoding("C",2);
+    String expected = "C";
+    assertEquals(expected,decode.getEncodedText());
+  }
 }
