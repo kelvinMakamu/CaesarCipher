@@ -5,9 +5,7 @@
  */
 package models;
 
-import org.junit.AfterClass;
 import static org.junit.Assert.assertEquals;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
@@ -15,17 +13,6 @@ import org.junit.Test;
  * @author KMAKAMU
  */
 public class EncodingTest {
-    
-    public EncodingTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
     
     @Test
     public void Encoding_InstantiatingClass(){
