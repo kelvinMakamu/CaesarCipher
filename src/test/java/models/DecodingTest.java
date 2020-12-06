@@ -34,5 +34,12 @@ public class DecodingTest {
     assertEquals(expected,decode.getCipherKey());
   }
   
+  @Test
+  public void decodeEncodedText_OneLetterWord_A(){
+    Encoding encode  = new Encoding("C",2);
+    String expected  = "A";
+    assertEquals(expected,encode.decodeEncodedText());
+  }
+  
   
 }
