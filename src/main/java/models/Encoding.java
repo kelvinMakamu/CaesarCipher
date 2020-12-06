@@ -10,5 +10,8 @@ package models;
  * @author KMAKAMU
  */
 public class Encoding {
+
+  public Encoding() {
+  }
     
 }
