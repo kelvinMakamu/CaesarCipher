@@ -35,9 +35,13 @@ public class Decoding {
   }
   
   public String decodeEncodedText() {
-   char first    = this.getEncodedText().charAt(0);
-   int newIndex  = (listItems.indexOf(first) - this.cipherKey)%alphabets.length;
-   return String.valueOf(alphabets[newIndex]);
+   String wordFormed = "";
+   char[] letters = this.getEncodedText().toCharArray();
+   for(char letter: letters){
+      int newIndex  = (listItems.indexOf(letter) - this.cipherKey)%alphabets.length;
+      wordFormed +=alphabets[newIndex];
+   }
+   return wordFormed;
   }
   
 }
