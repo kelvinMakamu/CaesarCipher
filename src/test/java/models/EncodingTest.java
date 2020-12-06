@@ -62,6 +62,12 @@ public class EncodingTest {
       assertEquals(expected,encode.encodePlainText());
     }
     
+    @Test
+    public void encodePlainText_ManyLetterWord_CDEF(){
+      Encoding encode  = new Encoding("ABCD",2);
+      String expected  = "CDEF";
+      assertEquals(expected,encode.encodePlainText());
+    }
     
     
 }
