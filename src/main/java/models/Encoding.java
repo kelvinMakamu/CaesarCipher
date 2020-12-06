@@ -22,7 +22,7 @@ public class Encoding {
     return this.plainText;
   }
 
-  Object getCipherKey() {
+  public int getCipherKey() {
     return 0;
   }
     
