@@ -26,4 +26,6 @@ public class DecodingTest {
     String expected = "C";
     assertEquals(expected,decode.getEncodedText());
   }
+  
+  
 }
