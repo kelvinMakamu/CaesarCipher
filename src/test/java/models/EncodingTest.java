@@ -41,4 +41,13 @@ public class EncodingTest {
       assertEquals(expected,encode.isValidKey());
     }
     
+    @Test
+    public void isValidKey_WhenValidKey_TRUE(){
+      Encoding encode = new Encoding("A",1);
+      boolean expected = true;
+      assertEquals(expected,encode.isValidKey());
+    }
+    
+    
+    
 }
