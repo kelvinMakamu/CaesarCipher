@@ -55,4 +55,10 @@ public class DecodingTest {
     assertEquals(expected,decode.decodeEncodedText());
   }
   
+  @Test
+  public void decodeEncodedText_IgnoringNonCharacters_AB1D(){
+    Decoding decode = new Decoding("CD1F",2);
+    String expected = "AB1D";
+    assertEquals(expected,decode.decodeEncodedText());
+  }
 }
