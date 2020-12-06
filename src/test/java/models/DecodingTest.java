@@ -48,5 +48,11 @@ public class DecodingTest {
     assertEquals(expected,decode.decodeEncodedText());
   }
   
+  @Test
+  public void decodeEncodedText_ManyLetterWord_ABCD(){
+    Decoding decode  = new Decoding("CDEF",2);
+    String expected  = "ABCD";
+    assertEquals(expected,decode.decodeEncodedText());
+  }
   
 }
