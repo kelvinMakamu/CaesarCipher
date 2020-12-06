@@ -34,4 +34,11 @@ public class EncodingTest {
       assertEquals(expected,encode.getCipherKey());
     }
     
+    @Test
+    public void isValidKey_WhenInvalidKey_FALSE(){
+      Encoding encode = new Encoding("A",29);
+      boolean expected = false;
+      assertEquals(expected,encode.isValidKey());
+    }
+    
 }

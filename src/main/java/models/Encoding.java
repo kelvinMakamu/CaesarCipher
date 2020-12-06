@@ -16,6 +16,7 @@ public class Encoding {
   
   public Encoding(String plainText, int cipherKey) {
     this.plainText = plainText;
+    this.cipherKey = cipherKey;
   }
 
   public String getPlainText() {
@@ -23,7 +24,11 @@ public class Encoding {
   }
 
   public int getCipherKey() {
-    return 0;
+    return this.cipherKey;
+  }
+
+  Object isValidKey() {
+    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
   }
     
 }
