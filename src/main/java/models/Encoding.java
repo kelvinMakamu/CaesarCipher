@@ -33,6 +33,14 @@ public class Encoding {
   public int getCipherKey() {
     return this.cipherKey;
   }
+  
+  public void setPlainText(String plainText) {
+    this.plainText = plainText;
+  }
+
+  public void setCipherKey(int cipherKey) {
+    this.cipherKey = cipherKey;
+  }
 
   public boolean isValidKey() {
     return (this.cipherKey >0 && this.cipherKey <=25);
