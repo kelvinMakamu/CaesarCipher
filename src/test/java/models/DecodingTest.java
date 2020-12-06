@@ -37,7 +37,14 @@ public class DecodingTest {
   @Test
   public void decodeEncodedText_OneLetterWord_A(){
     Decoding decode = new Decoding("C",2);
-    String expected  = "A";
+    String expected = "A";
+    assertEquals(expected,decode.decodeEncodedText());
+  }
+  
+  @Test
+  public void decodeEncodedText_TwoLetterWord_AB(){
+    Decoding decode  = new Decoding("CD",2);
+    String expected  = "AB";
     assertEquals(expected,decode.decodeEncodedText());
   }
   
