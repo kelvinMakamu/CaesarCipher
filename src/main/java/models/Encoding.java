@@ -10,8 +10,11 @@ package models;
  * @author KMAKAMU
  */
 public class Encoding {
-
-  public Encoding() {
+  
+  private String plainText;
+  private int cipherKey;
+  
+  public Encoding(String plainText, int cipherKey) {
   }
     
 }

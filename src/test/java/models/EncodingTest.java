@@ -16,7 +16,7 @@ public class EncodingTest {
     
     @Test
     public void Encoding_InstantiatingClass(){
-      Encoding encode = new Encoding();
+      Encoding encode = new Encoding("A",2);
       assertEquals(true, encode instanceof Encoding);
     }
     
