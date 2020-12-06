@@ -1,0 +1,39 @@
+# Compiled source #
+############
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.bat
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# OS generated files #
+############
+.DS_Store
+.DS_Store?
+._*
+
+# Java and Gradle #
+############
+build/
+.gradle/
+.nb-gradle/
+out/
+out
+.gradle
+gradle
+gradlew.bat
+gradlew
+settings.gradle
