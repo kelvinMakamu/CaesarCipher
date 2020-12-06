@@ -5,6 +5,7 @@
  */
 package models;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -35,17 +36,22 @@ public class Decoding {
   }
   
   public String decodeEncodedText() {
-   String wordFormed = "";
-   char[] letters = this.getEncodedText().toCharArray();
-   for(char letter: letters){
-     if(listItems.contains(letter)){
-      int newIndex  = (listItems.indexOf(letter) - this.cipherKey)%alphabets.length;
-      wordFormed   += alphabets[newIndex];
-     }else{
-       wordFormed += letter;
-     }
+   String words[] = this.getEncodedText().split(" ");
+   List<String> reconstructed = new ArrayList<>();
+   for(String word: words){
+      List<String> morphedWord = new ArrayList<>();
+      char [] letters = word.toCharArray();
+      for(char letter: letters){
+        if(listItems.contains(letter)){
+         int newIndex  = (listItems.indexOf(letter)-this.cipherKey)%alphabets.length;
+          morphedWord.add(String.valueOf(alphabets[newIndex]));
+        }else{
+          morphedWord.add(String.valueOf(letter));
+        }
+      }
+      reconstructed.add(String.join("",morphedWord));
    }
-   return wordFormed;
+   return String.join(" ",reconstructed);
   }
   
 }

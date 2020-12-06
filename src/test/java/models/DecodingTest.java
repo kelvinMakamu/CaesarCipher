@@ -68,4 +68,6 @@ public class DecodingTest {
     String expected = "AB CD";
     assertEquals(expected,decode.decodeEncodedText());
   }
+  
+  
 }
