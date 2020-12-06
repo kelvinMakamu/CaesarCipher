@@ -71,8 +71,15 @@ public class EncodingTest {
     
     @Test
     public void encodePlainText_IgnoringNonCharacters_CD1F(){
-       Encoding encode = new Encoding("AB1D",2);
-      String expected  = "CD1F";
+      Encoding encode = new Encoding("AB1D",2);
+      String expected = "CD1F";
+      assertEquals(expected,encode.encodePlainText());
+    }
+    
+    @Test
+    public void encodePlainText_EncodeSentence_CD_EF(){
+      Encoding encode = new Encoding("AB CD",2);
+      String expected = "CD EF";
       assertEquals(expected,encode.encodePlainText());
     }
     

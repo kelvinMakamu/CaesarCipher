@@ -39,7 +39,8 @@ public class Encoding {
     return (this.cipherKey >0 && this.cipherKey <=25);
   }
 
-  public String encodePlainText() {
+  public String encodePlainText(){
+    String [] words = input.split(" ");
     char letters[] = this.getPlainText().toCharArray();
     for(char letter: letters){
       if(listItems.contains(letter)){
