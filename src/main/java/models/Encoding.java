@@ -40,9 +40,11 @@ public class Encoding {
   }
 
   public String encodePlainText() {
-    char first    = this.getPlainText().charAt(0);
-    int newIndex  = (listItems.indexOf(first)+this.cipherKey)%alphabets.length;
-    morphedWord  += alphabets[newIndex];
+    char letters[] = this.getPlainText().toCharArray();
+    for(char letter: letters){
+      int newIndex  = (listItems.indexOf(letter)+this.cipherKey)%alphabets.length;
+      morphedWord  += alphabets[newIndex];
+    }
     return morphedWord;
   }
     

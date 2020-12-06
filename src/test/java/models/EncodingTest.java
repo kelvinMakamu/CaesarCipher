@@ -52,14 +52,14 @@ public class EncodingTest {
     public void encodePlainText_OneLetterWord_C(){
       Encoding encode  = new Encoding("A",2);
       String expected  = "C";
-      assertEquals(expected, encode.encodePlainText());
+      assertEquals(expected,encode.encodePlainText());
     }
     
     @Test
-    public void encodePlainText_TwoLetterWord_BC(){
-      Encoding encode  = new Encoding("A",2);
+    public void encodePlainText_TwoLetterWord_CD(){
+      Encoding encode  = new Encoding("AB",2);
       String expected  = "CD";
-      assertEquals(expected, encode.encodePlainText());
+      assertEquals(expected,encode.encodePlainText());
     }
     
     
