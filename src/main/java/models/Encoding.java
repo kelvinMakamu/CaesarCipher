@@ -42,8 +42,12 @@ public class Encoding {
   public String encodePlainText() {
     char letters[] = this.getPlainText().toCharArray();
     for(char letter: letters){
-      int newIndex  = (listItems.indexOf(letter)+this.cipherKey)%alphabets.length;
-      morphedWord  += alphabets[newIndex];
+      if(listItems.contains(letter)){
+        int newIndex  = (listItems.indexOf(letter)+this.cipherKey)%alphabets.length;
+        morphedWord  += alphabets[newIndex];
+      }else{
+        morphedWord  += letter;
+      }
     }
     return morphedWord;
   }
