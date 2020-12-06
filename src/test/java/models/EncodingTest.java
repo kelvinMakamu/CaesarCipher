@@ -6,7 +6,9 @@
 package models;
 
 import org.junit.AfterClass;
+import static org.junit.Assert.assertEquals;
 import org.junit.BeforeClass;
+import org.junit.Test;
 
 /**
  *
@@ -27,7 +29,8 @@ public class EncodingTest {
     
     @Test
     public void Encoding_InstantiatingClass(){
-        
+      Encoding encode = new Encoding();
+      assertEquals(true, encode instanceof Encoding);
     }
     
 }
