@@ -20,4 +20,18 @@ public class EncodingTest {
       assertEquals(true, encode instanceof Encoding);
     }
     
+    @Test
+    public void Encoding_getsPlainText_A(){
+      Encoding encode = new Encoding("A",2);
+      String expected = "A";
+      assertEquals(expected,encode.getPlainText());
+    }
+    
+    @Test
+    public void Encoding_getsCipherKey_2(){
+      Encoding encode = new Encoding("A",2);
+      int expected    = 2;
+      assertEquals(expected,encode.getCipherKey());
+    }
+    
 }

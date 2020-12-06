@@ -15,6 +15,15 @@ public class Encoding {
   private int cipherKey;
   
   public Encoding(String plainText, int cipherKey) {
+    this.plainText = plainText;
+  }
+
+  public String getPlainText() {
+    return this.plainText;
+  }
+
+  Object getCipherKey() {
+    return 0;
   }
     
 }
