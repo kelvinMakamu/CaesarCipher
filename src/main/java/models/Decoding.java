@@ -38,8 +38,12 @@ public class Decoding {
    String wordFormed = "";
    char[] letters = this.getEncodedText().toCharArray();
    for(char letter: letters){
+     if(listItems.contains(letter)){
       int newIndex  = (listItems.indexOf(letter) - this.cipherKey)%alphabets.length;
-      wordFormed +=alphabets[newIndex];
+      wordFormed   += alphabets[newIndex];
+     }else{
+       wordFormed += letter;
+     }
    }
    return wordFormed;
   }
