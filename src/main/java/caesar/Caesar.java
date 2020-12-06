@@ -1,5 +1,8 @@
 package caesar;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 import models.Decoding;
 import models.Encoding;
@@ -23,8 +26,34 @@ public class Caesar {
         System.out.println("Input String: "+encoding.getPlainText());
         System.out.println("Encrypted String: "+encoding.encodePlainText());
         System.out.println("Decrypted String: "+decoding.decodeEncodedText());
+        caesarCipherIntoFile(encoding.encodePlainText(),encoding.getCipherKey(),decoding.decodeEncodedText());
       }else{
         System.out.println(ERROR_RULE);
+      }
+    }
+    
+    public static void caesarCipherIntoFile(String encodedText,int cipherKey,
+      String plainText){
+      try {
+          FileWriter encryptor = new FileWriter("encodedText.txt");
+          encryptor.write("Cipher Key: "+cipherKey);
+          encryptor.write("Input String: "+plainText);
+          encryptor.write("Encrypted String: "+encodedText);
+          encryptor.close();
+          System.out.println("Successfully wrote to the file.");
+          File myObj = new File("encodedText.txt");
+          Scanner myReader = new Scanner(myObj);
+          while (myReader.hasNextLine()) {
+            FileWriter decoder = new FileWriter("decodedText.txt");
+            decoder.write("Cipher Key: "+cipherKey+"\n");
+            decoder.write("Encrypted String: "+encodedText+"\n");
+            decoder.write("Decrypted String: "+plainText+"\n");
+            decoder.close();
+          }
+          myReader.close();
+      } catch (IOException e) {
+        System.out.println("An error occurred.");
+        e.printStackTrace();
       }
     }
 }
