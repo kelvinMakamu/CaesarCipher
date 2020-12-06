@@ -44,7 +44,8 @@ public class Decoding {
       for(char letter: letters){
         if(listItems.contains(letter)){
           int resultIndex = (listItems.indexOf(letter)-this.cipherKey) < 0 
-                  ? (listItems.indexOf(letter)-this.cipherKey)+alphabets.length : (listItems.indexOf(letter)-this.cipherKey);
+            ? (listItems.indexOf(letter)-this.cipherKey)+alphabets.length
+            : (listItems.indexOf(letter)-this.cipherKey);
           int newIndex  = (resultIndex)%alphabets.length;
           morphedWord.add(String.valueOf(alphabets[newIndex]));
         }else{
