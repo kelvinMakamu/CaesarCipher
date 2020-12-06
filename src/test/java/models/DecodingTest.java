@@ -69,5 +69,12 @@ public class DecodingTest {
     assertEquals(expected,decode.decodeEncodedText());
   }
   
+  @Test
+  public void decodeEncodedText_DecodeLetterNegativeIndex_Y(){
+    Decoding decode = new Decoding("A",2);
+    String expected = "Y";
+    assertEquals(expected,decode.decodeEncodedText());
+  }
+  
   
 }

@@ -43,7 +43,7 @@ public class Decoding {
       char [] letters = word.toCharArray();
       for(char letter: letters){
         if(listItems.contains(letter)){
-         int newIndex  = (listItems.indexOf(letter)-this.cipherKey)%alphabets.length;
+          int newIndex  = (listItems.indexOf(letter)-this.cipherKey)%alphabets.length;
           morphedWord.add(String.valueOf(alphabets[newIndex]));
         }else{
           morphedWord.add(String.valueOf(letter));
