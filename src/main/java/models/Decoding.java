@@ -14,12 +14,17 @@ public class Decoding {
   private String encodedText;
   private int cipherKey;
   
-  Decoding(String encodedText, int cipherKey) {
+  public Decoding(String encodedText, int cipherKey) {
     this.encodedText = encodedText;
+    this.cipherKey   = cipherKey;
   }
 
   public String getEncodedText() {
    return this.encodedText;
+  }
+
+  public int getCipherKey() {
+    return this.cipherKey;
   }
   
 }

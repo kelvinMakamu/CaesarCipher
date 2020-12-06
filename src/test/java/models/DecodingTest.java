@@ -27,5 +27,12 @@ public class DecodingTest {
     assertEquals(expected,decode.getEncodedText());
   }
   
+  @Test
+  public void Decoding_getsCipherKey(){
+    Decoding decode = new Decoding("C",2);
+    int expected    = 2;
+    assertEquals(expected,decode.getCipherKey());
+  }
+  
   
 }
