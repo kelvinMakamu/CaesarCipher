@@ -61,4 +61,11 @@ public class DecodingTest {
     String expected = "AB1D";
     assertEquals(expected,decode.decodeEncodedText());
   }
+  
+  @Test
+  public void decodeEncodedText_DecodeSentence_AB_CD(){
+    Decoding decode = new Decoding("CD EF",2);
+    String expected = "AB CD";
+    assertEquals(expected,decode.decodeEncodedText());
+  }
 }
