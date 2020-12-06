@@ -55,6 +55,13 @@ public class EncodingTest {
       assertEquals(expected, encode.encodePlainText());
     }
     
+    @Test
+    public void encodePlainText_TwoLetterWord_BC(){
+      Encoding encode  = new Encoding("A",2);
+      String expected  = "CD";
+      assertEquals(expected, encode.encodePlainText());
+    }
+    
     
     
 }
