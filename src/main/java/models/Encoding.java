@@ -30,5 +30,9 @@ public class Encoding {
   public boolean isValidKey() {
     return (this.cipherKey >0 && this.cipherKey <=25);
   }
+
+  public String encodePlainText() {
+    return null;
+  }
     
 }

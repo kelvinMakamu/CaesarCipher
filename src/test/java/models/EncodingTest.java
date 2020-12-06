@@ -36,16 +36,23 @@ public class EncodingTest {
     
     @Test
     public void isValidKey_WhenInvalidKey_FALSE(){
-      Encoding encode = new Encoding("A",29);
+      Encoding encode  = new Encoding("A",29);
       boolean expected = false;
       assertEquals(expected,encode.isValidKey());
     }
     
     @Test
     public void isValidKey_WhenValidKey_TRUE(){
-      Encoding encode = new Encoding("A",1);
+      Encoding encode  = new Encoding("A",1);
       boolean expected = true;
       assertEquals(expected,encode.isValidKey());
+    }
+    
+    @Test
+    public void encodePlainText_OneLetterWord_C(){
+      Encoding encode  = new Encoding("A",2);
+      String expected  = "C";
+      assertEquals(expected, encode.encodePlainText());
     }
     
     
