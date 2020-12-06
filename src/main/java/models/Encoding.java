@@ -27,8 +27,8 @@ public class Encoding {
     return this.cipherKey;
   }
 
-  Object isValidKey() {
-    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  public boolean isValidKey() {
+    return (this.cipherKey >0 && this.cipherKey <=25);
   }
     
 }
