@@ -34,6 +34,14 @@ public class Decoding {
   public int getCipherKey() {
     return this.cipherKey;
   }
+
+  public void setEncodedText(String encodedText) {
+    this.encodedText = encodedText;
+  }
+
+  public void setCipherKey(int cipherKey) {
+    this.cipherKey = cipherKey;
+  }
   
   public String decodeEncodedText() {
    String words[] = this.getEncodedText().split(" ");
