@@ -5,6 +5,7 @@
  */
 package models;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -19,8 +20,6 @@ public class Encoding {
   private final Character [] alphabets = {'A','B','C','D','E','F','G','H','I','J','K',
       'L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
   private final List<Character> listItems = Arrays.asList(alphabets);
-  
-  public String morphedWord ="";
   
   public Encoding(String plainText, int cipherKey) {
     this.plainText = plainText;
@@ -40,17 +39,22 @@ public class Encoding {
   }
 
   public String encodePlainText(){
-    String [] words = input.split(" ");
-    char letters[] = this.getPlainText().toCharArray();
-    for(char letter: letters){
-      if(listItems.contains(letter)){
-        int newIndex  = (listItems.indexOf(letter)+this.cipherKey)%alphabets.length;
-        morphedWord  += alphabets[newIndex];
-      }else{
-        morphedWord  += letter;
+    String words[] = this.getPlainText().split(" ");
+    List<String> reconstructed = new ArrayList<>();
+    for(String word: words){
+      List<String> morphedWord = new ArrayList<>();
+      char [] letters = word.toCharArray();
+      for(char letter: letters){
+        if(listItems.contains(letter)){
+          int newIndex  = (listItems.indexOf(letter)+this.cipherKey)%alphabets.length;
+          morphedWord.add(String.valueOf(alphabets[newIndex]));
+        }else{
+          morphedWord.add(String.valueOf(letter));
+        }
       }
+      reconstructed.add(String.join("",morphedWord));
     }
-    return morphedWord;
+    return String.join(" ",reconstructed);
   }
     
 }
