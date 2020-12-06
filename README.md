@@ -24,7 +24,6 @@ To start using this project:
 * `git clone https://github.com/kelvinMakamu/CaesarCipher.git`
 * `cd CaesarCipher`
 * `gradle build`
-* `cd build/classes/java/main/caesar` and run `java Caeasar`
 
 ## Technologies Used
 
