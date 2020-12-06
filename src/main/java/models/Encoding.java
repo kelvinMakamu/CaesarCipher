@@ -5,6 +5,9 @@
  */
 package models;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  *
  * @author KMAKAMU
@@ -13,6 +16,11 @@ public class Encoding {
   
   private String plainText;
   private int cipherKey;
+  private final Character [] alphabets = {'A','B','C','D','E','F','G','H','I','J','K',
+      'L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+  private final List<Character> listItems = Arrays.asList(alphabets);
+  
+  public String morphedWord ="";
   
   public Encoding(String plainText, int cipherKey) {
     this.plainText = plainText;
@@ -32,7 +40,10 @@ public class Encoding {
   }
 
   public String encodePlainText() {
-    return null;
+    char first    = this.getPlainText().charAt(0);
+    int newIndex  = (listItems.indexOf(first)+this.cipherKey)%alphabets.length;
+    morphedWord  += alphabets[newIndex];
+    return morphedWord;
   }
     
 }
