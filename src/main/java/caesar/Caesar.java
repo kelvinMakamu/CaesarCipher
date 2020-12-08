@@ -15,11 +15,11 @@ public class Caesar {
     public static void main(String[] args) {
       Scanner input = new Scanner(System.in);
       System.out.println("Please enter a phrase to encrypt");
-      String phrase = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG";
-//      String phrase = input.next();
+//      String phrase = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG";
+      String phrase = input.nextLine();
       System.out.println("Please enter a cipher key (1-25)");
-      int cipherKey = 23;
-//      int cipherKey = input.nextInt();
+//      int cipherKey = 23;
+      int cipherKey = input.nextInt();
       Encoding encoding = new Encoding(phrase,cipherKey);
       if(encoding.isValidKey()){
         Decoding decoding = new Decoding(encoding.encodePlainText(),cipherKey);
