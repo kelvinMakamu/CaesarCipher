@@ -1,3 +1,3 @@
-Cipher Key: 2
-Input String: THE QUIET
-Encrypted String: VJG SWKGV
+Cipher Key: 23
+Input String: THE RED ALERT
+Encrypted String: QEB OBA XIBOQ

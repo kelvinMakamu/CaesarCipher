@@ -1,3 +1,0 @@
-Cipher Key: 2
-Encrypted String: VJG SWKGV
-Decrypted String: THE QUIET

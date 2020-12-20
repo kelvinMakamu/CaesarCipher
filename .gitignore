@@ -37,9 +37,11 @@ Thumbs.db
 ############
 build/
 .gradle/
+nbproject/
 out/
 out
 .gradle
+.nb-gradle-properties
 gradle
 gradlew.bat
 gradlew
